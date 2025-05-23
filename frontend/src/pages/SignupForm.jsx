@@ -3,7 +3,16 @@ import React, { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { motion } from "framer-motion";
 import { useNavigate, Link } from "react-router-dom";
-import { UserPlus, Mail, Lock, Phone, Calendar, User } from "lucide-react";
+import {
+  UserPlus,
+  Mail,
+  Lock,
+  Phone,
+  Calendar,
+  User,
+  PersonStanding,
+  UserRoundPen,
+} from "lucide-react";
 
 const formVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -27,8 +36,6 @@ export default function SignupForm() {
 
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
-
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -127,7 +134,7 @@ export default function SignupForm() {
             />
           </motion.div>
           <motion.div whileFocus={{ scale: 1.02 }} className="relative">
-            <User
+            <PersonStanding
               size={20}
               className="absolute left-3 top-1/2 transform -translate-y-1/2 text-red-600"
             />
@@ -141,13 +148,13 @@ export default function SignupForm() {
               <option className="" value="" disabled>
                 Select Gender
               </option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
             </select>
           </motion.div>
           <motion.div whileFocus={{ scale: 1.02 }} className="relative">
-            <User
+            <UserRoundPen
               size={20}
               className="absolute left-3 top-1/2 transform -translate-y-1/2 text-red-600"
             />

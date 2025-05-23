@@ -11,7 +11,11 @@ const memorySchema = new mongoose.Schema({
   },
   date: { type: Date, required: true },
   whatsapp: { type: String, required: true },
+  scheduled: {
+    enabled: { type: Boolean, default: false },
+    message: { type: String, default: "" },
+    jobId: { type: String },
+  },
   createdAt: { type: Date, default: Date.now },
-  // createdBy: { type: String, default: "admin" },
 });
 export default mongoose.model("Memory", memorySchema);

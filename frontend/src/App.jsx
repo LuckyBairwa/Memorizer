@@ -14,6 +14,7 @@ import { useAuth } from "./context/AuthContext";
 import AddMemory from "./pages/AddMemory";
 import { MemoryProvider } from "./context/MemoryContext";
 import Search from "./pages/Search";
+import Memory from "./pages/Memory";
 
 function PrivateRoute({ children }) {
   const { token } = useAuth();
@@ -77,6 +78,14 @@ function AppContent() {
               element={
                 <PrivateRoute>
                   <Search />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/search/:id"
+              element={
+                <PrivateRoute>
+                  <Memory />
                 </PrivateRoute>
               }
             />

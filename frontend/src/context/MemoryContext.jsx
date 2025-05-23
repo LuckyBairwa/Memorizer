@@ -20,6 +20,7 @@ export function MemoryProvider({ children }) {
     if (!res.ok) return;
     const list = await res.json();
     setMemories(list);
+    return list;
   };
 
   // Add one new memory
@@ -37,8 +38,8 @@ export function MemoryProvider({ children }) {
       throw new Error(err.message || "Failed to save");
     }
     const newMem = await res.json();
-    // prepend so newest appear first
     setMemories((prev) => [newMem, ...prev]);
+    speak("Memory added successfully!");
     return newMem;
   };
 

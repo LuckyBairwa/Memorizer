@@ -2,12 +2,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
-import { useAuth } from "../context/AuthContext";
-import { Calendar, Tag, Phone, Smile, User2 } from "lucide-react";
+import { Calendar, Phone, Smile, User2 } from "lucide-react";
 import { useMemory } from "../context/MemoryContext";
 
 export default function AddMemory() {
-  const { token } = useAuth();
   const { addMemory } = useMemory();
   const [form, setForm] = useState({
     title: "",
@@ -29,7 +27,7 @@ export default function AddMemory() {
       return setMsg({ type: "error", text: "Date must be DDMMYYYY" });
 
     try {
-      await addMemory(form); // ← centralized
+      await addMemory(form);
       setMsg({ type: "success", text: "Memory saved! 🎉" });
       setForm({ title: "", type: "birthday", date: "", whatsapp: "" });
       setTimeout(() => setMsg({ type: "", text: "" }), 3000);
@@ -129,10 +127,7 @@ export default function AddMemory() {
             onChange={handleChange}
             className="w-full px-4 py-2 border border-red-600 rounded-lg focus:ring-2 focus:ring-red-400 outline-none"
             style={{
-              "-webkit-appearance": "none",
-              "-moz-appearance": "none",
               appearance: "none",
-              "-webkit-tap-highlight-color": "transparent",
             }}
           >
             <option value="birthday">🎂 Birthday</option>

@@ -60,22 +60,22 @@ export default function Footer() {
           <p className="text-md flex items-center"><IoCall className="text-red-500"/>: +91 8278648632</p>
           <div className="flex space-x-4 mt-2">
             <Link to="https://wa.me/8278648632" target="_blank" className="outline-none">
-              <FaWhatsapp size={24} className="text-green-500 cursor-pointer" />
+              <FaWhatsapp size={24} className="text-green-500 cursor-pointer hover:scale-150 transition-all duration-500" />
             </Link>
             <Link to="https://www.facebook.com/profile.php?id=100088888142992" target="_blank" className="outline-none">
-              <FaFacebook size={24} className="text-blue-500 cursor-pointer" />
+              <FaFacebook size={24} className="text-blue-500 cursor-pointer hover:scale-150 transition-all duration-500" />
             </Link>
             <Link to="https://www.instagram.com/luckyg_777" target="_blank" className="outline-none">
-              <FaInstagram size={24} className="text-pink-500 cursor-pointer" />
+              <FaInstagram size={24} className="text-pink-500 cursor-pointer hover:scale-150 transition-all duration-500" />
             </Link>
             <Link to="https://www.linkedin.com/in/lucky-bairwa" target="_blank" className="outline-none">
-              <FaLinkedin size={24} className="text-blue-500 cursor-pointer" />
+              <FaLinkedin size={24} className="text-blue-500 cursor-pointer hover:scale-150 transition-all duration-500" />
             </Link>
             <Link to="https://x.com/Lucky_Bairwa_20" target="_blank" className="outline-none">
-              <FaTwitter size={24} className="text-blue-500 cursor-pointer" />
+              <FaTwitter size={24} className="text-blue-500 cursor-pointer hover:scale-150 transition-all duration-500" />
             </Link>
             <Link to="https://github.com/LuckyBairwa" target="_blank" className="outline-none">
-              <FaGithub size={24} className="text-black cursor-pointer" />
+              <FaGithub size={24} className="text-black cursor-pointer hover:scale-150 transition-all duration-500" />
             </Link>
           </div>
         </div>
