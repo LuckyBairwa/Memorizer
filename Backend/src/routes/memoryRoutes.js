@@ -6,8 +6,6 @@ import {
   updateMemory,
   deleteMemory,
   getMemory,
-  scheduleMemory,
-  cancelSchedule,
 } from "../controllers/memoryController.js";
 const router = express.Router();
 
@@ -17,7 +15,5 @@ router.get("/", listMemories);
 router.put("/:id", updateMemory);
 router.delete("/:id", deleteMemory);
 router.get("/:id", getMemory);
-router.post("/:id/schedule", scheduleMemory);
-router.delete("/:id/schedule", cancelSchedule);
 
 export default router;

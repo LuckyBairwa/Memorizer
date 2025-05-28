@@ -1,8 +1,8 @@
 // Navbar.jsx
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { BiSolidAlarmAdd } from "react-icons/bi";
-import { FaHome, FaSearch, FaUser, FaSignOutAlt, FaPlus } from "react-icons/fa";
+import { FaHome, FaUser, FaSignOutAlt, FaPlus } from "react-icons/fa";
+import { MdOutlineFeedback, MdEngineering  } from "react-icons/md";
 import { TbListSearch } from "react-icons/tb";
 import { useAuth } from "../context/AuthContext";
 import { assets, profile_img } from "../assets/assets";
@@ -98,6 +98,22 @@ export default function Navbar() {
                     >
                       <FaPlus className="text-red-600" size={15} />
                       Add Memory
+                    </Link>
+                    <Link
+                      to="/feedback"
+                      className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-300 text-center gap-4 transition-all duration-500 outline-none"
+                      onClick={() => setDropdownOpen(false)}
+                    >
+                      <MdOutlineFeedback className="text-red-600" size={16} />
+                      Feedback
+                    </Link>
+                    <Link
+                      to="/developers"
+                      className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-300 text-center gap-4 transition-all duration-500 outline-none"
+                      onClick={() => setDropdownOpen(false)}
+                    >
+                      <MdEngineering className="text-red-600" size={16} />
+                      Developers
                     </Link>
                     <button
                       onClick={handleLogout}

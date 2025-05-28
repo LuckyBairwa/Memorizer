@@ -15,6 +15,7 @@ import AddMemory from "./pages/AddMemory";
 import { MemoryProvider } from "./context/MemoryContext";
 import Search from "./pages/Search";
 import Memory from "./pages/Memory";
+import Developers from "./pages/Developers";
 
 function PrivateRoute({ children }) {
   const { token } = useAuth();
@@ -39,6 +40,14 @@ function AppContent() {
             <Route path="/" element={token ? <Home /> : <HeroSection />} />
 
             {/* Public pages: only for guests */}
+            <Route
+              path="/developers"
+              element={
+                // <PrivateRoute>
+                  <Developers />
+                // </PrivateRoute>
+              }
+            />
             <Route
               path="/login"
               element={

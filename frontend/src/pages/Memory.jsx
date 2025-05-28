@@ -102,7 +102,7 @@ export default function Memory() {
         setLoading(false);
       }
     })();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [id, token]);
 
   // Schedule for next occurrence

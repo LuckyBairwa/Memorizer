@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useMemory } from "../context/MemoryContext";
 import { motion, AnimatePresence } from "framer-motion";
-import { Calendar, Edit2, Trash2, User, Save, X } from "lucide-react";
+import { Calendar, Edit2, Trash2, User, Save, X, PlusIcon } from "lucide-react";
 import { FaPlus, FaWhatsapp } from "react-icons/fa";
 import { TbCalendarSmile } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
@@ -124,6 +124,14 @@ export default function Search() {
           <option value="birthday">🎂 Birthday</option>
           <option value="anniversary">💍 Anniversary</option>
         </select>
+
+        <div className="flex gap-6 px-3 text-white bg-red-500 rounded-lg">
+          <button
+          onClick={() => navigate("/add")}
+          className="flex gap-2 items-center font-bold cursor-pointer">
+            <PlusIcon size={20} className="text-white" /> Add Memory
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
@@ -221,11 +229,7 @@ export default function Search() {
                       className="border-b px-2 py-1"
                     />
                   ) : (
-                    <span
-                      className="cursor-pointer"
-                    >
-                      +91 {m.whatsapp}
-                    </span>
+                    <span className="cursor-pointer">+91 {m.whatsapp}</span>
                   )}
                 </div>
 
