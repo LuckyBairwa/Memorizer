@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { useNavigate, Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { Mail, Lock, LogIn } from "lucide-react";
-import { speak } from "../utils/speech";
+import '../index.css'
 
 const formVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -28,7 +28,6 @@ export default function LoginForm() {
     setError("");
     setLoading(true);
     try {
-      
       await login(form);
       navigate("/my-profile");
     } catch (err) {

@@ -6,16 +6,11 @@ const memorySchema = new mongoose.Schema({
   title: { type: String, required: true },
   type: {
     type: String,
-    enum: ["birthday", "anniversary"],
-    default: "birthday",
+    enum: ["Birthday", "Anniversary"],
+    default: "Birthday",
   },
   date: { type: Date, required: true },
   whatsapp: { type: String, required: true },
-  scheduled: {
-    enabled: { type: Boolean, default: false },
-    message: { type: String, default: "" },
-    jobId: { type: String },
-  },
   createdAt: { type: Date, default: Date.now },
 });
 export default mongoose.model("Memory", memorySchema);

@@ -2,6 +2,7 @@
 import React from "react";
 import { FaWhatsapp, FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
+import '../index.css'
 
 export default function Feedback() {
   const quotes = [

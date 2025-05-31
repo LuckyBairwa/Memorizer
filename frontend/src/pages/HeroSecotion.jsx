@@ -5,6 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Sparkles, CalendarHeart, Gift, UserPlus, LogIn  } from 'lucide-react';
 import { assets } from '../assets/assets';
+import '../index.css';
 
 export default function HeroSection() {
   return (

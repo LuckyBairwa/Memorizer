@@ -4,12 +4,13 @@ import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { Calendar, Phone, Smile, User2 } from "lucide-react";
 import { useMemory } from "../context/MemoryContext";
+import '../index.css'
 
 export default function AddMemory() {
   const { addMemory } = useMemory();
   const [form, setForm] = useState({
     title: "",
-    type: "birthday",
+    type: "Birthday",
     date: "",
     whatsapp: "",
   });
@@ -29,7 +30,7 @@ export default function AddMemory() {
     try {
       await addMemory(form);
       setMsg({ type: "success", text: "Memory saved! 🎉" });
-      setForm({ title: "", type: "birthday", date: "", whatsapp: "" });
+      setForm({ title: "", type: "Birthday", date: "", whatsapp: "" });
       setTimeout(() => setMsg({ type: "", text: "" }), 3000);
     } catch (err) {
       setMsg({ type: "error", text: err.message });
@@ -130,8 +131,8 @@ export default function AddMemory() {
               appearance: "none",
             }}
           >
-            <option value="birthday">🎂 Birthday</option>
-            <option value="anniversary">💍 Anniversary</option>
+            <option value="Birthday">Birthday</option>
+            <option value="Anniversary">Anniversary</option>
           </select>
         </motion.div>
 

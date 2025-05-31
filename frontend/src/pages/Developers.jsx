@@ -3,6 +3,7 @@ import React from "react";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { TbCalendarPlus, TbSearch } from "react-icons/tb";
 import { FiPhoneCall } from "react-icons/fi";
+import '../index.css'
 
 const stats = [
   { label: "Add Memory Page", value: "1+" },

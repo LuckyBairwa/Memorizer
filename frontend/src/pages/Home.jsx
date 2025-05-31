@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
-import { CalendarHeart, Gift, Sparkles, Star } from "lucide-react";
+import { CalendarHeart, Gift, Sparkles } from "lucide-react";
 import { assets } from "../assets/assets";
+import '../index.css';
 
 const features = [
   {

@@ -85,7 +85,7 @@ export default function Navbar() {
                     <img
                       src={avatarSrc}
                       alt="avatar"
-                      className="w-9 h-9 rounded-full border-2 border-white hover:border-gray-200 transition"
+                      className="w-9 h-9 rounded-full border-2 border-white hover:border-red-300 transition-all duration-500"
                     />
                   </button>
 
@@ -103,21 +103,21 @@ export default function Navbar() {
                         <Link
                           to="/my-profile"
                           onClick={() => setDropdownOpen(false)}
-                          className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100"
+                          className="flex items-center px-4 py-2 text-gray-700 hover:bg-red-100"
                         >
                           <FaUser className="mr-2 text-pink-600" /> Profile
                         </Link>
                         <Link
                           to="/add"
                           onClick={() => setDropdownOpen(false)}
-                          className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100"
+                          className="flex items-center px-4 py-2 text-gray-700 hover:bg-red-100"
                         >
                           <FaPlus className="mr-2 text-pink-600" /> Add Memory
                         </Link>
                         <Link
                           to="/feedback"
                           onClick={() => setDropdownOpen(false)}
-                          className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100"
+                          className="flex items-center px-4 py-2 text-gray-700 hover:bg-red-100"
                         >
                           <MdOutlineFeedback className="mr-2 text-pink-600" />{" "}
                           Feedback
@@ -125,14 +125,14 @@ export default function Navbar() {
                         <Link
                           to="/developers"
                           onClick={() => setDropdownOpen(false)}
-                          className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100"
+                          className="flex items-center px-4 py-2 text-gray-700 hover:bg-red-100"
                         >
                           <MdEngineering className="mr-2 text-pink-600" />{" "}
                           Developers
                         </Link>
                         <button
                           onClick={handleLogout}
-                          className="flex items-center w-full px-4 py-2 text-gray-700 hover:bg-gray-100"
+                          className="flex items-center w-full px-4 py-2 text-gray-700 hover:bg-red-100"
                         >
                           <FaSignOutAlt className="mr-2 text-pink-600" /> Logout
                         </button>

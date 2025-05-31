@@ -37,16 +37,15 @@ function AppContent() {
       <div className="mt-18">
         <AnimatePresence>
           <Routes location={location} key={location.pathname}>
-            {/* Root: hero if guest, home if logged in */}
             <Route path="/" element={token ? <Home /> : <HeroSection />} />
 
             {/* Public pages: only for guests */}
             <Route
               path="/developers"
               element={
-                // <PrivateRoute>
+                <PrivateRoute>
                   <Developers />
-                // </PrivateRoute>
+                </PrivateRoute>
               }
             />
             <Route
@@ -100,7 +99,7 @@ function AppContent() {
               }
             />
             <Route
-              path="/search/:id"
+              path="/memory/:id"
               element={
                 <PrivateRoute>
                   <Memory />

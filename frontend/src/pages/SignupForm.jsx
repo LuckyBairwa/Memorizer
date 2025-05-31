@@ -3,6 +3,7 @@ import React, { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { motion } from "framer-motion";
 import { useNavigate, Link } from "react-router-dom";
+import '../index.css';
 import {
   UserPlus,
   Mail,

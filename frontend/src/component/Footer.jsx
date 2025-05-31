@@ -58,12 +58,12 @@ export default function Footer() {
           </p>
           <div className="flex space-x-2">
             {[
-              { Icon: FaWhatsapp, href: "https://wa.me/8278648632" },
-              { Icon: FaFacebook, href: "https://facebook.com/" },
-              { Icon: FaInstagram, href: "https://instagram.com/" },
-              { Icon: FaLinkedin, href: "https://linkedin.com/" },
-              { Icon: FaTwitter, href: "https://twitter.com/" },
-              { Icon: FaGithub, href: "https://github.com/" },
+              { Icon: FaWhatsapp, href: "https://wa.me/+918278648632" },
+              { Icon: FaFacebook, href: "https://facebook.com/profile.php?id=100088888142992" },
+              { Icon: FaInstagram, href: "https://instagram.com/lucky.shairwal" },
+              { Icon: FaLinkedin, href: "https://linkedin.com/in/lucky-bairwa" },
+              { Icon: FaTwitter, href: "https://twitter.com/Lucky_Bairwa_20" },
+              { Icon: FaGithub, href: "https://github.com/LuckyBairwa" },
             ].map(({ Icon, href }) => (
               <a
                 key={href}

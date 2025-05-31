@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Edit2, Save, X } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 import { profile_img } from "../assets/assets.js";
+import '../index.css';
 
 export default function MyProfile() {
   const { user: ctx, updateProfile, fetchProfile } = useAuth();
