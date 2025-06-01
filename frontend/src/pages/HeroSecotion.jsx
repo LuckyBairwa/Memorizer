@@ -24,7 +24,7 @@ export default function HeroSection() {
             emulateTouch
             interval={3000}
             transitionTime={800} 
-            className="h-64 sm:h-80 md:h-96 lg:h-[500px] bg-white"
+            className="bg-white"
           >
             {[
               { title: 'Remember Birthdays', desc: 'Never miss a chance to wish your loved ones a happy birthday.', img: assets.HappyBirthday },
@@ -36,11 +36,11 @@ export default function HeroSection() {
                   <h2 className="text-3xl sm:text-5xl font-bold text-red-500 mb-2 underline">{slide.title}</h2>
                   <p className="text-blue-700 text-base font-semibold mt-5 sm:text-lg">{slide.desc}</p>
                 </div>
-                <div className="w-full lg:w-1/2 h-48 lg:h-full">
+                <div className="w-full lg:w-1/2 h-48 sm:h-64 md:h-80 lg:h-[500px] flex justify-center items-center">
                   <img
                     src={slide.img}
                     alt={slide.title}
-                    className="object-contain w-f h-[400px] my-10 mx-5"
+                    className="object-contain w-full h-full my-10 mx-5"
                   />
                 </div>
               </div>
